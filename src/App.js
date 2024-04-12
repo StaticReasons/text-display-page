@@ -7,8 +7,8 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import AddIcon from '@mui/icons-material/Add';
 
 function App() {
-  const [textList, setTextList] = useState(['1', '2', '3', '4', '5']);
-  // const [textList, setTextList] = useState(['Write a text here']);
+  // const [textList, setTextList] = useState(['1', '2', '3', '4', '5']);
+  const [textList, setTextList] = useState(['Write a text here']);
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   useEffect(() => {
