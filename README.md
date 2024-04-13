@@ -1,3 +1,4 @@
-# a simple text display page --- whcich is my solution to give names to tab groups in chrome mobile(((((
+# a simple text display page
 
 like this
+support saving multiple text snippets
