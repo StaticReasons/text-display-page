@@ -5,6 +5,9 @@ import CloseIcon from '@mui/icons-material/Close';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import AddIcon from '@mui/icons-material/Add';
+import VerticalAlignTopIcon from '@mui/icons-material/VerticalAlignTop';
+import VerticalAlignCenterIcon from '@mui/icons-material/VerticalAlignCenter';
+import VerticalAlignBottomIcon from '@mui/icons-material/VerticalAlignBottom';
 
 function App() {
   // const [textList, setTextList] = useState(['1', '2', '3', '4', '5']);
@@ -96,17 +99,31 @@ function App() {
 
   return (
     <div className="container">
-      <div className="display-container">
-        <div className="display-text">
+      <div className="display-container display-text-center">
+        <div className="display-text" id="display-text">
           {currentText}
         </div>
       </div>
-      <input
-        type="text"
-        id="input"
-        value={currentText}
-        onChange={handleInputChange}
-      />
+      <div className="input-line">
+        <input
+          type="text"
+          id="input"
+          value={currentText}
+          onChange={handleInputChange}
+        />
+        <button onClick={() => 
+          document.getElementById("display-text").parentElement.classList = "display-container display-text-top"}>
+          <VerticalAlignTopIcon />
+        </button>
+        <button onClick={() => 
+          document.getElementById("display-text").parentElement.classList = "display-container display-text-center"}>
+          <VerticalAlignCenterIcon />
+        </button>
+        <button onClick={() => 
+          document.getElementById("display-text").parentElement.classList = "display-container display-text-bottom"}>
+          <VerticalAlignBottomIcon />
+        </button>
+      </div>
       <div className="text-list-container" onWheel={(e) => e.currentTarget.scrollLeft += e.deltaY * 0.6}>
         <div className="text-list">
           {textList.map((text, index) => (

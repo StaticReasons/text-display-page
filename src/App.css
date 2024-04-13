@@ -14,10 +14,22 @@ body {
 
 .display-container{
   flex-grow: 1;
-  padding: 0 10%;
+  padding: 5vw 5vw;
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.display-container.display-text-top{
+  align-items: flex-start;
+}
+
+.display-container.display-text-center{
+  align-items: center;
+}
+
+.display-container.display-text-bottom{
+  align-items: flex-end;
 }
 
 .display-text {
@@ -25,7 +37,6 @@ body {
   font-size: calc(min(11vw, 15vh));
   font-weight: bolder;
   text-align: start;
-  align-items: center;
 
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -35,14 +46,42 @@ body {
   white-space: pre-wrap;
 }
 
-input {
+.input-line {
   margin-top: 1vh;
+  padding: 10px;
+  width: 90%;
+  max-width: 800px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.input-line input {
+  flex-grow: 1;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5000px;
-  width: 70%;
-  max-width: 600px;
   font-size: 16px;
+}
+
+.input-line button {
+  height: 100%;
+  aspect-ratio: 1/1;
+  margin-left: 5px;
+  padding: 0;
+  background-color: white;
+  color: #111111;
+  border: none;
+  border-radius: 10000px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.input-line button:hover {
+  background-color: #e6e6e6;
 }
 
 .text-list-container {
@@ -64,7 +103,7 @@ input {
 }
 
 .text-card {
-  height: 13vh;
+  height: 140px;
   aspect-ratio: 5/3;
   background-color: #f5f5f5;
   border: 2px solid #f5f5f5;
